@@ -26,6 +26,7 @@ Database:
   Database: 'db_staffcore'
 
 StaffChat:
+  Prefix: '#'
   Format: '&8[&cStaff&8] &c%player%: &f%message%'
   Sound: 'ENTITY_EXPERIENCE_ORB_PICKUP'
   Permission: 'staffcore.staffchat'

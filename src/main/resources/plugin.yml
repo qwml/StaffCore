@@ -1,0 +1,6 @@
+name: StaffCore
+version: '${project.version}'
+main: me.jay.staffcore.StaffCore
+api-version: 1.18
+authors: [ Jayie, Maria ]
+description: StaffCore

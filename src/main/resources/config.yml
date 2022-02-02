@@ -1,0 +1,11 @@
+# StaffCore Plugin
+# Created by Jayie and Mario.
+
+# Set to false to disable any features.
+Features:
+  StaffChat: true
+  StaffList: true
+  ClearChat: true
+  MuteChat: true
+  Maintenance: true
+  Freeze: true

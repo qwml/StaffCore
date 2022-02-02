@@ -12,13 +12,15 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.sql.SQLException;
 
 public final class StaffCore extends JavaPlugin implements Listener {
-
+    
+    private static StaffCore instance;
     public database DB;
     public databasequeries DBQ;
 
     @Override
     public void onEnable() {
         // Plugin startup logic
+        instance = this;
         this.DB = new database();
         this.DBQ = new databasequeries(this);
         commands();
@@ -33,7 +35,7 @@ public final class StaffCore extends JavaPlugin implements Listener {
     }
 
     public void commands(){
-        getCommand("command").setExecutor(new staffchat(this));
+        //getCommand("command").setExecutor(new staffchat(this));
     }
 
     public void files(){
@@ -74,6 +76,10 @@ public final class StaffCore extends JavaPlugin implements Listener {
             DBQ.createPlayer(player);
         }
 
+    }
+    
+    public static StaffCore getInstance() {
+        return instance;
     }
 
     private String Color(String s){

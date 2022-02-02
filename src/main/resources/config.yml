@@ -9,3 +9,56 @@ Features:
   MuteChat: true
   Maintenance: true
   Freeze: true
+  Vanish: true
+
+Database:
+  Type: H2
+  Address: 'localhost'
+  Port: '3306'
+  Username: 'root'
+  Password: ''
+  Database: 'db_staffcore'
+
+StaffChat:
+  Format: '&8[&cStaff&8] &c%player%: &f%message%'
+  Sound: 'ENTITY_EXPERIENCE_ORB_PICKUP'
+  Permission: 'staffcore.staffchat'
+
+StaffList:
+  Format:
+    - '&8-<>--- &6Staff List &8---<>-'
+    - '%list%'
+  Permission:
+    Staff: 'staffcore.stafflist.staff'
+    View: 'staffcore.stafflist.view'
+
+ClearChat:
+  Format: '&8[&cStaff&8] &c%player% has cleared the chat.'
+  Sound: 'ENTITY_ANVIL_DROP'
+  Permission: 'staffcore.clearchat'
+
+MuteChat:
+  Format:
+    Mute: '&8[&cStaff&8] &c%player% has muted the chat.'
+    Unmute: '&8[&cStaff&8] &a%player% has unmuted the chat.'
+  Sound: 'ENTITY_CAT_AMBIENT'
+  Permission: 'staffcore.mutechat'
+
+Maintenance:
+  DefaultReason: 'Server is being worked on.'
+  Format: '&8[&cStaff&8] &c%player% has toggled maintenance mode %status%.'#
+  Permission: 'staffcore.maintenance'
+
+Freeze:
+  Format:
+    Player:
+      Freeze: '&8[&cStaff&8] &cYou have been frozen by %player%'
+      Unfreeze: '&8[&cStaff&8] &cYou have been unfrozen by %player%'
+    Moderator:
+      Freeze: '&8[&cStaff&8] &cYou have frozen %target%.'
+      Unfreeze: '&8[&cStaff&8] &cYou have unfrozen %target%.'
+    Permission: 'staffcore.freeze'
+
+Vanish:
+  Format: '&8[&cStaff&8] &cVanish has been toggled %status%.'
+  Permission: 'staffcore.vanish'

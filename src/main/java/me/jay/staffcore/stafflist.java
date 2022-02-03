@@ -1,32 +1,42 @@
 package me.jay.staffcore;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.Color;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
+
+import java.util.List;
 
 public class stafflist implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        FileConfiguration config = StaffCore.getInstance().getConfig();
+        List<String> listmessage = config.getStringList("StaffList.Format");
         if (sender instanceof Player){
             Player player = (Player) sender;
 
             if (command.getName().equalsIgnoreCase("stafflist")){
 
-                if (player.hasPermission("*insert permission*")){
+                if (player.hasPermission(config.getString("StaffList.Permission.View"))){
 
                     Player playername = null;
                     for(Player name : Bukkit.getOnlinePlayers()){
-                        name = playername;
+                        if (player.hasPermission(config.getString("StaffList.Permission.Staff"))) {
+                            playername = name;
+                        }
+                    }
+
+                    for (String listmessage2 : listmessage){
+                        listmessage2.replace("%list%", playername.toString());
+                        player.sendMessage(listmessage2);
                     }
 
 
-                    for (String listmessage : ){
-                        listmessage.replace(();
-                        player.sendMessage(listmessage);
-                    }
 
                 }
 
@@ -35,5 +45,10 @@ public class stafflist implements CommandExecutor {
 
         }
         return true;
+    }
+
+    private String Color(String s){
+        s = ChatColor.translateAlternateColorCodes('&',s);
+        return s;
     }
 }

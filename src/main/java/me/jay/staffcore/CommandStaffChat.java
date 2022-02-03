@@ -16,31 +16,38 @@ public class CommandStaffChat implements CommandExecutor {
         if (sender instanceof Player) {
             Player player = (Player) sender;
 
-            if(config.getBoolean("Features.StaffChat")) {
-                if(player.isOp() || player.hasPermission(config.getString("StaffChat.Permission"))) {
-                    if(args.length <= 0) {
-                        player.sendMessage(ChatColor.RED + "Correct usage: /sc <message>");
-                    } else {
-                        String message = "";
-                        for (String arg : args) {
-                            message = message + arg + " ";
-                        }
-                        if(message.length() <= 0) {
+            if (config.getBoolean("Features.StaffChat")) {
+
+                if (command.getName().equalsIgnoreCase("staffchat")) {
+
+                    if (player.isOp() || player.hasPermission(config.getString("StaffChat.Permission"))) {
+                        if (args.length <= 0) {
                             player.sendMessage(ChatColor.RED + "Correct usage: /sc <message>");
                         } else {
+                            String message = "";
+                            for (int i = 0; i < args.length; i++) {
+                                message = message + args[i] + " ";
+                            }
+                            if (message.length() <= 0) {
+                                player.sendMessage(ChatColor.RED + "Correct usage: /sc <message>");
+                            }
                             staffchat.StaffChatMessage(player, message);
-                            return true;
                         }
+                    } else {
+                        player.sendMessage(Color(config.getString("Errors.NoPermission")));
                     }
-                } else {
-                    player.sendMessage(ChatColor.RED + "[ERROR] You don't have permission to run this command.");
                 }
             }
-        } else {
+
+        }else {
             StaffCore.getInstance().getLogger().info(ChatColor.RED + "[StaffCore] [ERROR] This command must be executed as a player.");
         }
-
         return true;
+    }
+
+    private String Color(String s){
+        s = ChatColor.translateAlternateColorCodes('&',s);
+        return s;
     }
     
 }

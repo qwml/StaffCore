@@ -35,7 +35,7 @@ public final class StaffCore extends JavaPlugin implements Listener {
     }
 
     public void commands(){
-        //getCommand("command").setExecutor(new staffchat(this));
+        getCommand("staffchat").setExecutor(new CommandStaffChat());
     }
 
     public void files(){
@@ -45,6 +45,7 @@ public final class StaffCore extends JavaPlugin implements Listener {
 
     public void listeners(){
         getServer().getPluginManager().registerEvents(this, this);
+        getServer().getPluginManager().registerEvents(new EventOnMessage(), this);
     }
 
     public void database() throws SQLException {

@@ -30,8 +30,9 @@ public class CommandStaffChat implements CommandExecutor {
                             }
                             if (message.length() <= 0) {
                                 player.sendMessage(ChatColor.RED + "Correct usage: /sc <message>");
+                            } else {
+                                staffchat.StaffChatMessage(player, message);
                             }
-                            staffchat.StaffChatMessage(player, message);
                         }
                     } else {
                         player.sendMessage(Color(config.getString("Errors.NoPermission")));

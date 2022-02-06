@@ -68,6 +68,7 @@ public final class StaffCore extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new EventOnMessage(), this);
         getServer().getPluginManager().registerEvents(new PlayerJoinEvent(), this);
         getServer().getPluginManager().registerEvents(new PlayerMoveEvent(), this);
+        getServer().getPluginManager().registerEvents(new AsyncPlayerPreLoginEvent(), this);
     }
 
     public void database() throws SQLException {

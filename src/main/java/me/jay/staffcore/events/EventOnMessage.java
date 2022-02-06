@@ -1,4 +1,4 @@
-package me.jay.staffcore;
+package me.jay.staffcore.events;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;

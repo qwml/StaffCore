@@ -1,4 +1,4 @@
-package me.jay.staffcore;
+package me.jay.staffcore.commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -7,7 +7,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
-public class CommandStaffChat implements CommandExecutor {
+public class StaffChat implements CommandExecutor {
     
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {

@@ -1,4 +1,4 @@
-package me.jay.staffcore;
+package me.jay.staffcore.commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Color;
@@ -12,7 +12,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class mutechat implements CommandExecutor {
+public class MuteChat implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {

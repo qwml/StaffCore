@@ -1,4 +1,4 @@
-package me.jay.staffcore;
+package me.jay.staffcore.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;

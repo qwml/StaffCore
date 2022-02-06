@@ -11,6 +11,7 @@ Features:
   Freeze: true
   Vanish: true
   ModMode: true
+  Maintenance: true
 
 Errors:
   NoPermission: '&8[&cStaff&8] &cNo Permission.'
@@ -53,9 +54,10 @@ MuteChat:
   Permission: 'staffcore.mutechat'
 
 Maintenance:
-  DefaultReason: 'Server is being worked on.'
-  Format: '&8[&cStaff&8] &c%player% has toggled maintenance mode %status%.'#
-  Permission: 'staffcore.maintenance'
+  Reason: '&c(!) The server is currenlty under maintenance!'
+  Format: '&8[&cStaff&8] &c%player% has toggled maintenance mode to %status%.'
+  Permission: 'staffcore.maintenance.toggle'
+  BypassPermission: 'staffcore.maintenance.bypass'
 
 Freeze:
   Format:
@@ -68,5 +70,8 @@ Freeze:
     Permission: 'staffcore.freeze'
 
 Vanish:
-  Format: '&8[&cStaff&8] &cVanish has been toggled %status%.'
+  Format:
+    Vanish: '&8[&cStaff&8] &aVanish has been toggled on.'
+    Unvanish: '&8[&cStaff&8] &cVanish has been toggled off.'
+    KeptVanish: '&8[&cStaff&8] &e(!) You are still vanished!' 
   Permission: 'staffcore.vanish'

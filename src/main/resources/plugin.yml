@@ -6,8 +6,19 @@ authors: [ Jayie, Maria ]
 description: StaffCore
 commands:
   staffchat:
-    aliases: [s]
+    aliases: [s, sc]
     description: Allows a staff member to chat in the private chat.
   clearchat:
     aliases: [cc]
     description: Allows a staff member to clear the players chat.
+  mutechat:
+    aliases: [mc]
+    description: Allows a staff member to mute the chat.
+  vanish:
+    aliases: [v, invis]
+    description: Allows a staff member to become fully invisible.
+  stafflist:
+    aliases: [onlinestaff]
+    description: List all online staff members.
+  maintenance:
+    description: Allows a staff member to toggle maintenance mode.

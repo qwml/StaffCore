@@ -2,6 +2,18 @@ package me.jay.staffcore;
 
 import me.jay.staffcore.database.database;
 import me.jay.staffcore.database.databasequeries;
+
+import me.jay.staffcore.events.EventOnMessage;
+import me.jay.staffcore.events.PlayerJoinEvent;
+import me.jay.staffcore.events.AsyncPlayerPreLoginEvent;
+
+import me.jay.staffcore.commands.StaffChat;
+import me.jay.staffcore.commands.StaffChat;
+import me.jay.staffcore.commands.StaffList;
+import me.jay.staffcore.commands.MuteChat;
+import me.jay.staffcore.commands.Vanish;
+import me.jay.staffcore.commands.Maintenance;
+
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -35,8 +47,12 @@ public final class StaffCore extends JavaPlugin implements Listener {
     }
 
     public void commands(){
-        getCommand("staffchat").setExecutor(new CommandStaffChat());
-        getCommand("clearchat").setExecutor(new CommandClearChat());
+        getCommand("staffchat").setExecutor(new StaffChat());
+        getCommand("clearchat").setExecutor(new ClearChat());
+        getCommand("vanish").setExecutor(new Vanish());
+        getCommand("mutechat").setExecutor(new MuteChat());
+        getCommand("stafflist").setExecutor(new StaffList());
+        getCommand("maintenance").setExecutor(new Maintenance());
     }
 
     public void files(){
@@ -47,6 +63,7 @@ public final class StaffCore extends JavaPlugin implements Listener {
     public void listeners(){
         getServer().getPluginManager().registerEvents(this, this);
         getServer().getPluginManager().registerEvents(new EventOnMessage(), this);
+        getServer().getPluginManager().registerEvents(new PlayerJoinEvent(), this);
     }
 
     public void database() throws SQLException {

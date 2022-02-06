@@ -6,6 +6,7 @@ import me.jay.staffcore.database.databasequeries;
 import me.jay.staffcore.events.EventOnMessage;
 import me.jay.staffcore.events.PlayerJoinEvent;
 import me.jay.staffcore.events.AsyncPlayerPreLoginEvent;
+import me.jay.staffcore.events.PlayerMoveEvent;
 
 import me.jay.staffcore.commands.StaffChat;
 import me.jay.staffcore.commands.StaffChat;
@@ -13,6 +14,7 @@ import me.jay.staffcore.commands.StaffList;
 import me.jay.staffcore.commands.MuteChat;
 import me.jay.staffcore.commands.Vanish;
 import me.jay.staffcore.commands.Maintenance;
+import me.jay.staffcore.commands.Freeze;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -53,6 +55,7 @@ public final class StaffCore extends JavaPlugin implements Listener {
         getCommand("mutechat").setExecutor(new MuteChat());
         getCommand("stafflist").setExecutor(new StaffList());
         getCommand("maintenance").setExecutor(new Maintenance());
+        getCommand("freeze").setExecutor(new Freeze());
     }
 
     public void files(){
@@ -64,6 +67,7 @@ public final class StaffCore extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(this, this);
         getServer().getPluginManager().registerEvents(new EventOnMessage(), this);
         getServer().getPluginManager().registerEvents(new PlayerJoinEvent(), this);
+        getServer().getPluginManager().registerEvents(new PlayerMoveEvent(), this);
     }
 
     public void database() throws SQLException {

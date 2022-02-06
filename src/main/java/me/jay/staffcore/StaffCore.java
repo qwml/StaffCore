@@ -36,6 +36,7 @@ public final class StaffCore extends JavaPlugin implements Listener {
 
     public void commands(){
         getCommand("staffchat").setExecutor(new CommandStaffChat());
+        getCommand("clearchat").setExecutor(new CommandClearChat());
     }
 
     public void files(){

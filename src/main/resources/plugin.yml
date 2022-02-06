@@ -8,3 +8,6 @@ commands:
   staffchat:
     aliases: [s]
     description: Allows a staff member to chat in the private chat.
+  clearchat:
+    aliases: [cc]
+    description: Allows a staff member to clear the players chat.

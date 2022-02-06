@@ -43,6 +43,7 @@ ClearChat:
   Format: '&8[&cStaff&8] &c%player% has cleared the chat.'
   Sound: 'ENTITY_ANVIL_DROP'
   Permission: 'staffcore.clearchat'
+  BypassPermission: 'staffcore.clearchat.bypass'
 
 MuteChat:
   Format:

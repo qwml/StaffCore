@@ -23,8 +23,9 @@ public class CommandClearChat implements CommandExecutor {
                         for(Player p : Bukkit.getOnlinePlayers()) {
                             if(!p.hasPermission(config.getString("ClearChat.BypassPermission"))) {
                                 for(int i=0; i < 150; i++) {
-                                    p.sendMessage("\n");
+                                    p.sendMessage("");
                                 }
+                                player.sendMessage("Chat was cleared.");
                             }
                         }
                     } else {

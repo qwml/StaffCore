@@ -32,19 +32,19 @@ public class mutechat implements CommandExecutor {
                             mutechatcheckps = StaffCore.getInstance().DB.getConnection().prepareStatement("SELECT MutedChat FROM SCServer");
                             ResultSet mutechatcheckrs = mutechatcheckps.executeQuery();
                             int mutechatcheck = -1;
-                            String message = null;
+                            String message;
                             if (mutechatcheckrs.next()){
                                 mutechatcheck = mutechatcheckrs.getInt("MutedChat");
                             }
 
                             if (mutechatcheck == 1) {
                                 mutechatps.setInt(1, 1);
-                                message = Color(config.getString("MutedChat.Format"))
-                                player.sendMessage(Color(config.getString("MutedChat.Format")));
+                                message = Color(config.getString("MutedChat.Format.Mute"));
+                                player.sendMessage(Color(message));
                             }else{
                                 mutechatps.setInt(1, 0);
-                                message = Color(config.getString("MutedChat.Format"))
-                                player.sendMessage(Color(config.getString("MutedChat.Format")));
+                                message = Color(config.getString("MutedChat.Format.Unmute"));
+                                player.sendMessage(Color(message));
                             }
 
 

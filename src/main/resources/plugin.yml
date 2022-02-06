@@ -8,17 +8,26 @@ commands:
   staffchat:
     aliases: [s, sc]
     description: Allows a staff member to chat in the private chat.
+    usage: /<command> <message>
   clearchat:
     aliases: [cc]
     description: Allows a staff member to clear the players chat.
+    usage: /<command>
   mutechat:
     aliases: [mc]
     description: Allows a staff member to mute the chat.
+    usage: /<command>
   vanish:
     aliases: [v, invis]
     description: Allows a staff member to become fully invisible.
+    usage: /<command>
   stafflist:
     aliases: [onlinestaff]
     description: List all online staff members.
+    usage: /<command>
   maintenance:
     description: Allows a staff member to toggle maintenance mode.
+    usage: /<command>
+  freeze:
+    description: Allows a staff member to freeze a player and prevent their movement.
+    usage: /<command> <player>

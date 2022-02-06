@@ -15,7 +15,8 @@ Features:
 
 Errors:
   NoPermission: '&8[&cStaff&8] &cNo Permission.'
-  NullPlayer: '&8[&cStaff&8] &cPlayer Does Not Exist.'
+  NullPlayer: '&8[&cStaff&8] &cCould not find that player.'
+  NoPlayerSpecified: '&8[&cStaff&8] &cYou have not specified a player.'
   InvalidArgument: '&8[&cStaff&8] &cInvalid Command, use /staff help.'
 
 Database:

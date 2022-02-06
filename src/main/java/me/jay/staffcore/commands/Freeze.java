@@ -8,12 +8,11 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
-public class Freeze implements CommandExecutor {
-    
-    
+public class Freeze {
 
-    private String Color(String s) {
+    private String Color(String s){
         s = ChatColor.translateAlternateColorCodes('&',s);
         return s;
     }
+    
 }

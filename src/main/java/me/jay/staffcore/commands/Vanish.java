@@ -1,5 +1,13 @@
 package me.jay.staffcore.commands;
 
+import org.bukkit.ChatColor;
+import org.bukkit.Color;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandSender;
+import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.entity.Player;
+
 public class Vanish {
     //TODO: Use database to improve keeping vanish status on rejoin!
     //Vanish status is currently only kept using the "vanished" ArrayList and PlayerJoinEvent

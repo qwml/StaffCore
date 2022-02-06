@@ -25,8 +25,8 @@ public class ClearChat implements CommandExecutor {
                                 for(int i=0; i < 150; i++) {
                                     p.sendMessage("");
                                 }
-                                player.sendMessage(Color(config.getString("ClearChat.Format")));
                             }
+                            p.sendMessage(Color(config.getString("ClearChat.Format")))
                         }
                     } else {
                         player.sendMessage(Color(config.getString("Errors.NoPermission")));

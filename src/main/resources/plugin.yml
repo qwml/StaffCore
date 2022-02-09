@@ -11,3 +11,6 @@ commands:
   clearchat:
     aliases: [cc]
     description: Allows a staff member to clear the players chat.
+  mutechat:
+    aliases: [mc]
+    description: Allows a staff member to mute the chat.
